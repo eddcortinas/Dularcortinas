@@ -1,0 +1,16 @@
+FOTOS DO SITE - Du'Lar | Cortinas · Persianas · Decoração
+
+Coloque nesta pasta as imagens com exatamente estes nomes.
+
+Arquivo               Onde aparece                         Origem atual
+logo-dular.png        Logo do topo (vinho, sem fundo)      logo original enviada pela empresa
+logo-dular-branca.png Logo do rodapé (branca)              mesma logo, em branco
+sobre.jpg             Seção "Sobre nós"                    recorte do banner do perfil da empresa
+hero.jpg              Foto grande do topo                  Unsplash (ilustrativa)
+projeto-01 ... 07.jpg Galeria "Inspirações"                Unsplash (ilustrativas)
+og-image.jpg          Imagem do link no WhatsApp           logo sobre fundo claro
+favicon.png / favicon-180.png  Ícone da aba / celular      marca das listras da logo
+
+As fotos do Unsplash (unsplash.com) têm licença livre para uso comercial.
+São ilustrativas, não são trabalhos da Du'Lar. Troque pelas fotos reais quando tiver.
+Não use imagens do Google (direitos autorais).
