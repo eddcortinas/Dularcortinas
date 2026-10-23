@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="stylesheet" href="css/style.css?v=91">
 
   <!-- Dados estruturados para o Google (quando houver domínio, acrescente "url") -->
   <script type="application/ld+json">
@@ -147,7 +147,7 @@
         <div class="section__head">
           <p class="eyebrow">Modelos</p>
           <h2>Cortinas e persianas para cada janela e cada estilo</h2>
-          <p>Escolha um modelo e simule: o valor vem no orçamento, de acordo com as medidas e o tecido escolhido.</p>
+          <p>Escolha um modelo e simule: o site já mostra o valor estimado, de acordo com as medidas. O valor final vem no orçamento.</p>
         </div>
 
         <div class="products">
@@ -156,7 +156,7 @@
               <span class="product__num" aria-hidden="true">01</span>
               <h3>Cortina de tecido</h3>
               <p>Leve e elegante, feita sob medida para a sua janela.</p>
-              <p class="product__price">Valor sob consulta</p>
+              <p class="product__price">metro de tecido a partir de <strong>R$ 100,00</strong></p>
               <button type="button" class="btn btn--outline btn--sm product__sim" data-modelo="Cortina de tecido">Simular este modelo</button>
             </div>
           </article>
@@ -165,7 +165,7 @@
               <span class="product__num" aria-hidden="true">02</span>
               <h3>Cortina de tecido com blackout</h3>
               <p>Tecido com forro blackout, para escurecer o ambiente.</p>
-              <p class="product__price">Valor sob consulta</p>
+              <p class="product__price">metro de tecido a partir de <strong>R$ 173,91</strong></p>
               <button type="button" class="btn btn--outline btn--sm product__sim" data-modelo="Cortina de tecido com blackout">Simular este modelo</button>
             </div>
           </article>
@@ -183,7 +183,7 @@
               <span class="product__num" aria-hidden="true">04</span>
               <h3>Cortina rolô</h3>
               <p>Prática, enrola para cima e ocupa pouco espaço.</p>
-              <p class="product__price">Valor sob consulta</p>
+              <p class="product__price">m² a partir de <strong>R$ 234,50</strong></p>
               <button type="button" class="btn btn--outline btn--sm product__sim" data-modelo="Cortina rolô">Simular este modelo</button>
             </div>
           </article>
@@ -192,7 +192,7 @@
               <span class="product__num" aria-hidden="true">05</span>
               <h3>Cortina romana</h3>
               <p>Dobras horizontais que sobem e descem.</p>
-              <p class="product__price">Valor sob consulta</p>
+              <p class="product__price">m² a partir de <strong>R$ 361,29</strong></p>
               <button type="button" class="btn btn--outline btn--sm product__sim" data-modelo="Cortina romana">Simular este modelo</button>
             </div>
           </article>
@@ -201,7 +201,7 @@
               <span class="product__num" aria-hidden="true">06</span>
               <h3>Cortina double vision</h3>
               <p>Faixas alternadas que regulam a entrada de luz.</p>
-              <p class="product__price">Valor sob consulta</p>
+              <p class="product__price">m² a partir de <strong>R$ 431,20</strong></p>
               <button type="button" class="btn btn--outline btn--sm product__sim" data-modelo="Cortina double vision">Simular este modelo</button>
             </div>
           </article>
@@ -210,7 +210,7 @@
               <span class="product__num" aria-hidden="true">07</span>
               <h3>Persiana vertical</h3>
               <p>Lâminas verticais, boa opção para janelas largas e portas de vidro.</p>
-              <p class="product__price">Valor sob consulta</p>
+              <p class="product__price">m² a partir de <strong>R$ 169,90</strong></p>
               <button type="button" class="btn btn--outline btn--sm product__sim" data-modelo="Persiana vertical">Simular este modelo</button>
             </div>
           </article>
@@ -219,7 +219,7 @@
               <span class="product__num" aria-hidden="true">08</span>
               <h3>Persiana horizontal</h3>
               <p>Lâminas horizontais que regulam a luz.</p>
-              <p class="product__price">Valor sob consulta</p>
+              <p class="product__price">m² a partir de <strong>R$ 242,67</strong></p>
               <button type="button" class="btn btn--outline btn--sm product__sim" data-modelo="Persiana horizontal">Simular este modelo</button>
             </div>
           </article>
@@ -270,16 +270,16 @@
             <select id="sim-modelo" name="modelo" required>
               <option value="" disabled selected>Selecione o modelo</option>
               <optgroup label="Cortinas">
-                <option data-calculo="tecido">Cortina de tecido</option>
-                <option data-calculo="tecido">Cortina de tecido com blackout</option>
+                <option data-preco="100.00" data-calculo="tecido" data-alturamax="2.80">Cortina de tecido</option>
+                <option data-preco="173.91" data-calculo="tecido" data-alturamax="2.70">Cortina de tecido com blackout</option>
                 <option data-calculo="tecido">Cortina wave</option>
-                <option>Cortina rolô</option>
-                <option>Cortina romana</option>
-                <option>Cortina double vision</option>
+                <option data-preco="234.50" data-guia="110.00">Cortina rolô</option>
+                <option data-preco="361.29">Cortina romana</option>
+                <option data-preco="431.20">Cortina double vision</option>
               </optgroup>
               <optgroup label="Persianas">
-                <option>Persiana vertical</option>
-                <option>Persiana horizontal</option>
+                <option data-preco="169.90">Persiana vertical</option>
+                <option data-preco="242.67">Persiana horizontal</option>
               </optgroup>
               <optgroup label="Outros">
                 <option>Outro modelo</option>
@@ -360,7 +360,7 @@
           </div>
           <p class="sim__note sim__calculo" id="sim-calculo" hidden></p>
           <p class="sim__condicoes" id="sim-condicoes" hidden></p>
-          <p class="sim__note" id="sim-nota">O simulador mostra a medida (m² ou, nas cortinas de tecido, metros de tecido). O valor vem no orçamento, que enviamos pelo WhatsApp.</p>
+          <p class="sim__note" id="sim-nota">O simulador mostra a medida e o valor estimado. O valor final é confirmado no orçamento, que enviamos pelo WhatsApp.</p>
 
           <fieldset class="sim__cliente">
             <legend>Seus dados <span class="field__opt">(opcional)</span></legend>
@@ -611,6 +611,6 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.65-4.95A9 9 0 1 1 8 19.4L3 21z"/><g transform="translate(7.3 7.3) scale(.4)" stroke-width="4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></g></svg>
   </a>
 
-  <script src="js/main.js?v=1" defer></script>
+  <script src="js/main.js?v=91" defer></script>
 </body>
 </html>

@@ -288,8 +288,8 @@ function atualizarSimulacao() {
   else simValor.textContent = s.area && s.preco ? reais.format(s.valor) : "—";
   // Pagamento e prazo do item que está sendo simulado
   const temValor = !!(s.area && s.preco);
-  simCondicoes.innerHTML = temValor ? `${textoPagamento(s.valor)}<br>${s.prazo ? textoPrazo(s.prazo) : ""}` : "";
-  simCondicoes.hidden = !temValor;
+  // Sem condições de pagamento/prazo no site: ficam para o orçamento
+  simCondicoes.hidden = true;
 }
 
 function validarSimulacao(s) {
@@ -339,8 +339,7 @@ function renderLista() {
   simTotal.textContent = soma ? reais.format(soma) + (algumSemPreco ? " + itens sob consulta" : "") : "Sob consulta";
   // Pagamento e prazo da lista inteira (prazo = o maior entre os itens)
   const maiorPrazo = Math.max(0, ...lista.map((s) => s.prazo || 0));
-  simTotalCondicoes.innerHTML = soma ? `${textoPagamento(soma)}${maiorPrazo ? `<br>${textoPrazo(maiorPrazo)}` : ""}` : "";
-  simTotalCondicoes.hidden = !soma;
+  simTotalCondicoes.hidden = true;
 }
 
 function limparMedidas() {
@@ -431,8 +430,6 @@ sim.addEventListener("submit", (e) => {
     ...(linhasCliente.length ? [...linhasCliente, ""] : []),
     blocos.join("\n\n"),
     itens.length > 1 && soma ? `\n*Total estimado:* ${reais.format(soma)}${itens.some((s) => !s.preco) ? " + itens sob consulta" : ""}` : null,
-    soma ? `\n*Pagamento:* ${semTags(textoPagamento(soma))}` : null,
-    Math.max(0, ...itens.map((s) => s.prazo || 0)) ? `*${semTags(textoPrazo(Math.max(...itens.map((s) => s.prazo || 0))))}*` : null,
     "",
     "Gostaria de receber o orçamento.",
   ]
